@@ -1,0 +1,38 @@
+{
+  "core_simple60_byte_equivalent": true,
+  "all_python_syntax": "passed",
+  "runtime_imports": "passed using existing local upstream dependencies via ignored symlinks, not a fresh dependency installation",
+  "crop_intrinsics_checks": "passed",
+  "real_preparation": {
+    "can": {
+      "initial_train": 64,
+      "current_train": 72,
+      "heldouts": 45,
+      "same_selection_cameras_points_and_gt": true
+    },
+    "tissue": {
+      "initial_train": 81,
+      "current_train": 72,
+      "heldouts": 59,
+      "same_selection_cameras_points_and_gt": true
+    },
+    "tomato": {
+      "initial_train": 100,
+      "current_train": 72,
+      "heldouts": 59,
+      "same_selection_cameras_points_and_gt": true
+    },
+    "gimbal": {
+      "initial_train": 61,
+      "current_train": 72,
+      "heldouts": 51,
+      "same_selection_cameras_points_and_gt": true
+    }
+  },
+  "source_guards": "passed",
+  "training_rerun": false,
+  "gpu_smoke_rerun": false,
+  "remote_fetch": "blocked: HTTPS credentials unavailable",
+  "scope": "ReScene synthetic and real Multi-State; no baseline training pipelines",
+  "objective": "original benchmark, including regularisers"
+}

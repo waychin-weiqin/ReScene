@@ -1,0 +1,30 @@
+{
+  "t000": {
+    "sparse/0/cameras.bin": "9cd565f013be6e10a16b4b16908e98d1ebaac62319718a47d04eed44bd06329b",
+    "sparse/0/images.bin": "2bb30e168b05f74fedff2772982306d5407f187bbeccfcf99ed7eda742c84f2e",
+    "sparse/0/points3D.bin": "ec03a72ea341ec8656bea06cf6c7f17126a24c1ac4befb7c9580817dab0d89f5",
+    "train.txt": "859bb7c4d3af4e48553fc29713b6b17ca6ae8501eab6405a61f9599b499b77db",
+    "test.txt": "5d2b9f8f9d7d9f3c9c899ac449f0e14018d372092246295276f22939cfa0d1c4"
+  },
+  "t001": {
+    "sparse/0/cameras.bin": "529e3885a15c88b8c3280799a3b8e51d371496ec3a17f9db2347328548a7581b",
+    "sparse/0/images.bin": "d14ee8b4ca22890a0bd5c4236371376b71fe7627a3933fb9983a5809ac3c8395",
+    "sparse/0/points3D.bin": "0834854e318d0dea2da5e5e45dd5eaf2caa521720fc3e8a1a1d214b7c23ee9b2",
+    "train.txt": "60acd499f773d8e1a2fc7c6ba7e388dcab83907f97df614d93bd052a46eb9563",
+    "test.txt": "a5174b084c4bfb0a9d3cdbce2794d497973af2680bc8d24db58b547987322ef8"
+  },
+  "t002": {
+    "sparse/0/cameras.bin": "19b4ca761eb366fae6faa42cb93fa8ab60cde28311e886aa3ae593ec0b7e5bfd",
+    "sparse/0/images.bin": "1ab0bb5691765fe95e2872976193935ad39fb67e86769c0818cfa962ccf18d05",
+    "sparse/0/points3D.bin": "fbfe6e1e165253a7971cdbd8bdaadc342c9beb14fbe61f652cae7a4125288e0c",
+    "train.txt": "7dce6080e9113e38880bfe8652d00269c893292e1d363d81c73838c90a13e33a",
+    "test.txt": "4559aebb92a9c26ac72fd8f7002acda4137eb28875391abdf47aaef73ca463d0"
+  },
+  "t003": {
+    "sparse/0/cameras.bin": "1edf2e5d7549d125c554870d894b565336dede8696084bd81ad85adbd7d2bc3d",
+    "sparse/0/images.bin": "cfd82cf63017885ed066b888da1347b4e1142182ca6ad16b929776eb62d7cf27",
+    "sparse/0/points3D.bin": "eb1fa8b2b14ae904ae0428df495cdc271c67ff26555ded9f8ed5ff5ef5697ffe",
+    "train.txt": "5ace8d4e7c0a405b5045d3af7a7898cb698e75d28e52dbf1e98a30e1c0f124d3",
+    "test.txt": "919cc97ff70eabb56678d1a9b3f4a913a1b5e6928901a56e6736112b5f00e038"
+  }
+}

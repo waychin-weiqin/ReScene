@@ -1,0 +1,111 @@
+{
+  "copied_files": [
+    {
+      "file": "prototypes/simple60/common.py",
+      "original_sha256": "23d8b155b6d4bba35bf0334100732520b5765104e06edef6af24d4498ec8f1b2",
+      "release_sha256": "23d8b155b6d4bba35bf0334100732520b5765104e06edef6af24d4498ec8f1b2"
+    },
+    {
+      "file": "prototypes/simple60/base_model.py",
+      "original_sha256": "2a3acbb31b6c3a1b207e350736dd402f8b6e0a1a3c328d0f99327e50ca9d618b",
+      "release_sha256": "2a3acbb31b6c3a1b207e350736dd402f8b6e0a1a3c328d0f99327e50ca9d618b"
+    },
+    {
+      "file": "prototypes/simple60/soft_eligibility.py",
+      "original_sha256": "48d61e45efd843eb1009aafd2e5b65f093462090aa526ceac4920f8197fb6f00",
+      "release_sha256": "48d61e45efd843eb1009aafd2e5b65f093462090aa526ceac4920f8197fb6f00"
+    },
+    {
+      "file": "prototypes/simple60/birth_model.py",
+      "original_sha256": "53f3e9d4f2cea23213b6b200bf90057c047d87c20f611a8231c28ef6e3a383aa",
+      "release_sha256": "53f3e9d4f2cea23213b6b200bf90057c047d87c20f611a8231c28ef6e3a383aa"
+    },
+    {
+      "file": "prototypes/simple60/worker.py",
+      "original_sha256": "780cdf948bee9a250b54373dbce2e9b466c4af795fdea65f693a5b4462139fe4",
+      "release_sha256": "780cdf948bee9a250b54373dbce2e9b466c4af795fdea65f693a5b4462139fe4"
+    },
+    {
+      "file": "prototypes/simple60/change_evidence.py",
+      "original_sha256": "99a3b20fb16959b34090cf26d45a7dc15688ada39d31494ad1ee357d88da2554",
+      "release_sha256": "99a3b20fb16959b34090cf26d45a7dc15688ada39d31494ad1ee357d88da2554"
+    },
+    {
+      "file": "prototypes/simple60/refinement.py",
+      "original_sha256": "46595256811339644e5634d170f51e68d03db09b2fe4bfd1b4242b79560469f5",
+      "release_sha256": "46595256811339644e5634d170f51e68d03db09b2fe4bfd1b4242b79560469f5"
+    },
+    {
+      "file": "prototypes/periodic_gs/backend.py",
+      "original_sha256": "9d2829422d66f89f8fc2b6aa2769d5e968b938fbd7635877ab050d069efd1981",
+      "release_sha256": "9d2829422d66f89f8fc2b6aa2769d5e968b938fbd7635877ab050d069efd1981"
+    },
+    {
+      "file": "scripts/multistate_hard_common.py",
+      "original_sha256": "7a6ff1907928683e1e58c6fce2c96c87a9cab8caff3bee67ca45f50cca20ebbb",
+      "release_sha256": "0e2e5611c4195af05e6611b021c484e8cd1b1e68a551a7779d57f85a515036f1"
+    },
+    {
+      "file": "scripts/multistate_hard_adapter.py",
+      "original_sha256": "294102a57021254f56a6b44f5c734169bdca05645a2997d878b47ecf760f5018",
+      "release_sha256": "294102a57021254f56a6b44f5c734169bdca05645a2997d878b47ecf760f5018"
+    },
+    {
+      "file": "scripts/multistate_hard_initial_entry.py",
+      "original_sha256": "3ccc0a102831e2c2158355511c8891251c64f0e41bf5675b83cc07ba6d44f24f",
+      "release_sha256": "3ccc0a102831e2c2158355511c8891251c64f0e41bf5675b83cc07ba6d44f24f"
+    },
+    {
+      "file": "scripts/multistate_hard_depth.py",
+      "original_sha256": "cd7bcfba60d9d7fe02337da02a2cfd7023550192c3b72e2a863c0adf67d079f3",
+      "release_sha256": "24c0001e439c86a4bde2aeac911e9427e7f3f410790e41f96507c72766e0b8a1"
+    },
+    {
+      "file": "scripts/prepare_simple60.py",
+      "original_sha256": "adbc8911c4f07c9b3e349f38b109393e56be4e58f9e3acadff6d0a712bbfbe19",
+      "release_sha256": "adbc8911c4f07c9b3e349f38b109393e56be4e58f9e3acadff6d0a712bbfbe19"
+    },
+    {
+      "file": "scripts/report_multistate_hard.py",
+      "original_sha256": "461db75ca3c592752ac4a007810f1e82948b5dd78b75c193a30fa60aad7f5c44",
+      "release_sha256": "461db75ca3c592752ac4a007810f1e82948b5dd78b75c193a30fa60aad7f5c44"
+    },
+    {
+      "file": "scripts/ltgs_gpu_schedule.py",
+      "original_sha256": "de80f0c32555b25cf83bac574e1bc7c7e6f581b0b699127495ce29a1b7b474a8",
+      "release_sha256": "ba1b593a4d35c46f377aa7678b54ac98bc3875e0a992c9f89d68267c7a9c6669"
+    },
+    {
+      "file": "scripts/ltgs_run_policy.py",
+      "original_sha256": "f5f8b61de86b142a54158edc0ebcd9bdebd4d712d786d6519348d7723f422388",
+      "release_sha256": "f5f8b61de86b142a54158edc0ebcd9bdebd4d712d786d6519348d7723f422388"
+    },
+    {
+      "file": "scripts/prepare_multistate_hard.py",
+      "original_sha256": "9f8863db6087bcad6a371b7d89fcc3679ec7db5e6cc8f31466fc3519ab08fef7",
+      "release_sha256": "5106ee74d5aeeaf096b803e1a1b32186fe6ca477cf1fb80f1428b55c87c93855"
+    },
+    {
+      "file": "scripts/run_multistate_hard.py",
+      "original_sha256": "9b67ff020f55159624c839706a8753666e9f01d9caf4f9347537ca160b6b40bd",
+      "release_sha256": "647cc1746706ff962a221d04b9bb6935d6650c5a94333cb1c53bfb629dd5a943"
+    },
+    {
+      "file": "scripts/mast3r_depth_support.py",
+      "original_sha256": null,
+      "release_sha256": "b24156b0808194dedc3b4761110337a1861e8820874964296e1b20e2a3785845"
+    },
+    {
+      "file": "patches/periodic-gs/empty-visibility-rasterizer.patch",
+      "original_sha256": "04eda091472019a0d2b96b7d4734cd7d87ea492a88c95dac8606d41a2747e378",
+      "release_sha256": "04eda091472019a0d2b96b7d4734cd7d87ea492a88c95dac8606d41a2747e378"
+    }
+  ],
+  "changes": [
+    "Config path independent of previous WAT experiment",
+    "GPU/scene selection via wrapper; smoke-only orchestration option",
+    "MASt3R called function/class extracted verbatim, avoiding unrelated localization imports",
+    "Fresh installs may download pretrained assets; original cache-only policy not required"
+  ],
+  "numerics": "Original simple60 model, objective, worker training and preparation unchanged"
+}

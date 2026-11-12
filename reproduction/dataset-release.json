@@ -1,0 +1,12 @@
+{
+  "dataset": "Multi-State Hard",
+  "manifest_sha256": "1b0403e413f17e852c7f42b02258fe21e2261af942cabbaa2a152902ef3c04a6",
+  "sha256sums_sha256": "62cc301f6a0e3f8d3b3166418a17a9cc10d7d11aec88335d1d1f4a66dd9f4546",
+  "scenes": {
+    "robot_transfer": 12,
+    "teddy_coupled": 10,
+    "plant_motion": 10,
+    "cloth_fold": 10
+  },
+  "reference_repository_commit": "92feefea87de53ebc910d731f0350f520141c0dc"
+}

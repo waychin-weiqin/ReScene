@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "core_sources_byte_identical": true,
+  "generated_worker_matches_validated_original": true,
+  "camera_selection_and_image_hashes_match": true,
+  "scene": "robot_transfer",
+  "update_steps": [
+    3,
+    3
+  ],
+  "positive_splitting": true,
+  "exact_state_reload": true,
+  "historical_rerenders_pixel_exact": true,
+  "runtime": "existing chronogs environment and compiled dependencies; not a fresh-machine installation",
+  "initialization": "reused original completed initial PLY for packaging smoke only",
+  "depth": "reused original current-view MASt3R estimates with matched names and image hashes; no new depth inference in this smoke",
+  "fresh_full_benchmark_rerun": false,
+  "integration_patches_match_validated_runtime": true,
+  "extracted_depth_helper_ast_exact": true,
+  "smoke_completion_status_distinct_from_full": true,
+  "local_smoke_artifacts": "Retained outside repository in the research workspace; not deployment inputs"
+}

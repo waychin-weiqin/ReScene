@@ -1,0 +1,186 @@
+{
+  "source_commit": "a25e0eadcf149bf8a7f5cea180196f939e5ca93c",
+  "changes": "Only package paths, root depth, scheduler module names and setup guidance; no numerical algorithm changes. Prior audit files describe the predecessor layout.",
+  "files": [
+    {
+      "old": "prototypes/simple60/common.py",
+      "new": "rescene/model/common.py",
+      "old_sha256": "23d8b155b6d4bba35bf0334100732520b5765104e06edef6af24d4498ec8f1b2",
+      "new_sha256": "d15f10209148ca4b38d5749febde6ca55b1fb66ee0ada9ed1447aadcee9453ca"
+    },
+    {
+      "old": "prototypes/simple60/base_model.py",
+      "new": "rescene/model/base_model.py",
+      "old_sha256": "2a3acbb31b6c3a1b207e350736dd402f8b6e0a1a3c328d0f99327e50ca9d618b",
+      "new_sha256": "2a3acbb31b6c3a1b207e350736dd402f8b6e0a1a3c328d0f99327e50ca9d618b"
+    },
+    {
+      "old": "prototypes/simple60/soft_eligibility.py",
+      "new": "rescene/model/soft_eligibility.py",
+      "old_sha256": "48d61e45efd843eb1009aafd2e5b65f093462090aa526ceac4920f8197fb6f00",
+      "new_sha256": "48d61e45efd843eb1009aafd2e5b65f093462090aa526ceac4920f8197fb6f00"
+    },
+    {
+      "old": "prototypes/simple60/birth_model.py",
+      "new": "rescene/model/birth_model.py",
+      "old_sha256": "53f3e9d4f2cea23213b6b200bf90057c047d87c20f611a8231c28ef6e3a383aa",
+      "new_sha256": "53f3e9d4f2cea23213b6b200bf90057c047d87c20f611a8231c28ef6e3a383aa"
+    },
+    {
+      "old": "prototypes/simple60/worker.py",
+      "new": "rescene/model/worker.py",
+      "old_sha256": "780cdf948bee9a250b54373dbce2e9b466c4af795fdea65f693a5b4462139fe4",
+      "new_sha256": "780cdf948bee9a250b54373dbce2e9b466c4af795fdea65f693a5b4462139fe4"
+    },
+    {
+      "old": "prototypes/simple60/change_evidence.py",
+      "new": "rescene/model/change_evidence.py",
+      "old_sha256": "99a3b20fb16959b34090cf26d45a7dc15688ada39d31494ad1ee357d88da2554",
+      "new_sha256": "99a3b20fb16959b34090cf26d45a7dc15688ada39d31494ad1ee357d88da2554"
+    },
+    {
+      "old": "prototypes/simple60/refinement.py",
+      "new": "rescene/model/refinement.py",
+      "old_sha256": "46595256811339644e5634d170f51e68d03db09b2fe4bfd1b4242b79560469f5",
+      "new_sha256": "46595256811339644e5634d170f51e68d03db09b2fe4bfd1b4242b79560469f5"
+    },
+    {
+      "old": "prototypes/periodic_gs/backend.py",
+      "new": "rescene/rendering/backend.py",
+      "old_sha256": "9d2829422d66f89f8fc2b6aa2769d5e968b938fbd7635877ab050d069efd1981",
+      "new_sha256": "97791ac25189ea2cd72b71569392bd348427798f3b85ab814f760bf05c52f9f4"
+    },
+    {
+      "old": "scripts/report_multistate_hard.py",
+      "new": "rescene/pipeline/report_multistate_hard.py",
+      "old_sha256": "167212aefc95c9b102fcabeee86cb40b1e2c9eca72eee3754f11575fad1813b1",
+      "new_sha256": "167212aefc95c9b102fcabeee86cb40b1e2c9eca72eee3754f11575fad1813b1"
+    },
+    {
+      "old": "scripts/prepare_simple60.py",
+      "new": "rescene/pipeline/prepare_simple60.py",
+      "old_sha256": "adbc8911c4f07c9b3e349f38b109393e56be4e58f9e3acadff6d0a712bbfbe19",
+      "new_sha256": "52d800cd7a57d755937dfeaad3506caa68c2307236cf74f7d3e71d31f4534b2e"
+    },
+    {
+      "old": "scripts/multistate_hard_common.py",
+      "new": "rescene/pipeline/multistate_hard_common.py",
+      "old_sha256": "0e2e5611c4195af05e6611b021c484e8cd1b1e68a551a7779d57f85a515036f1",
+      "new_sha256": "6ba6679b8d45599d7b4dc013f460e254feef1c5831dd1aa756eee09f5a2d8359"
+    },
+    {
+      "old": "scripts/real_multistate_depth.py",
+      "new": "rescene/pipeline/real_multistate_depth.py",
+      "old_sha256": "d2dd226c22e2f265b59e61ab9adae8fa6cbcf65786b714d27a9309ae20ea953d",
+      "new_sha256": "1962c86bbc4d76e270ad514beb269077f3de15cdbcfe3a34ab2209763c67120d"
+    },
+    {
+      "old": "scripts/multistate_hard_adapter.py",
+      "new": "rescene/pipeline/multistate_hard_adapter.py",
+      "old_sha256": "294102a57021254f56a6b44f5c734169bdca05645a2997d878b47ecf760f5018",
+      "new_sha256": "294102a57021254f56a6b44f5c734169bdca05645a2997d878b47ecf760f5018"
+    },
+    {
+      "old": "scripts/multistate_hard_initial_entry.py",
+      "new": "rescene/pipeline/multistate_hard_initial_entry.py",
+      "old_sha256": "3ccc0a102831e2c2158355511c8891251c64f0e41bf5675b83cc07ba6d44f24f",
+      "new_sha256": "3ccc0a102831e2c2158355511c8891251c64f0e41bf5675b83cc07ba6d44f24f"
+    },
+    {
+      "old": "scripts/prepare_real_multistate.py",
+      "new": "rescene/pipeline/prepare_real_multistate.py",
+      "old_sha256": "3e1a795f57fca6220452e617fd9b0750a9e8c25234e5dd0bb3dc6ba2509bba84",
+      "new_sha256": "dc816f791bd269d10ea11e90c428a6a32fd90b14b84485fc9a201ce3983456a0"
+    },
+    {
+      "old": "scripts/ltgs_gpu_schedule.py",
+      "new": "rescene/pipeline/gpu_schedule.py",
+      "old_sha256": "ba1b593a4d35c46f377aa7678b54ac98bc3875e0a992c9f89d68267c7a9c6669",
+      "new_sha256": "886a3aa79c546160eb457000859898e95ac9b23e64c8e65fdf32e21f62146a4b"
+    },
+    {
+      "old": "scripts/reproduce_real_multistate.py",
+      "new": "rescene/pipeline/reproduce_real_multistate.py",
+      "old_sha256": "85a0d0478a3660c5b47b0b0aadf69179762a3106941f40fce61549d8c321bb8b",
+      "new_sha256": "9a01408b8e828ec5fff977c27b5bac91b6f303dfdcbf1bc4dc9645c8d2d950bb"
+    },
+    {
+      "old": "scripts/run_real_multistate.py",
+      "new": "rescene/pipeline/run_real_multistate.py",
+      "old_sha256": "77d6484aade6b7ec2bbbf1f5a2ffafeed88b913bda1ee608cd0115df48756849",
+      "new_sha256": "b118369e23ba478a99e7e030ec4db90c0118a2625efd7cf8383e9498a8aca3f5"
+    },
+    {
+      "old": "scripts/check_reproduction.py",
+      "new": "rescene/pipeline/check_reproduction.py",
+      "old_sha256": "a55aa9110201de37f00da749de2f1299c40302f8555b3580d59ff227ed5bbd42",
+      "new_sha256": "88d914ccf623f99d3e36ece781f263cc627d07ee11a98cd58df56d9fa76bfd13"
+    },
+    {
+      "old": "scripts/fetch_dependencies.py",
+      "new": "rescene/pipeline/fetch_dependencies.py",
+      "old_sha256": "5afc234743cb48521488c09256b97dfd53a979b3e1100c27b104b0bff4f0dff0",
+      "new_sha256": "d9a92b6968e4235bba2e630e9ec2927b0f162707f6ed8d7a9f1d8788b863bf0b"
+    },
+    {
+      "old": "scripts/real_multistate_adapter.py",
+      "new": "rescene/pipeline/real_multistate_adapter.py",
+      "old_sha256": "69563c15bdf1ec2637981c97167e70d6667d73a775a4d4db9eefc654d6dceb1a",
+      "new_sha256": "69563c15bdf1ec2637981c97167e70d6667d73a775a4d4db9eefc654d6dceb1a"
+    },
+    {
+      "old": "scripts/reproduce_multistate_hard.py",
+      "new": "rescene/pipeline/reproduce_multistate_hard.py",
+      "old_sha256": "683e77b78d1f90b7d41a4c93a4265e8bd8411ca3a3ddfafd063813387bde23fc",
+      "new_sha256": "9864f797687f7f03978a2a6d7c3d1bed65824eda20a81e28e2844b80d96e574d"
+    },
+    {
+      "old": "scripts/real_multistate_initial_entry.py",
+      "new": "rescene/pipeline/real_multistate_initial_entry.py",
+      "old_sha256": "762eae58ce8045adb655f2c77fb62ff564be6affe6f65f730eb60f9c842702a7",
+      "new_sha256": "762eae58ce8045adb655f2c77fb62ff564be6affe6f65f730eb60f9c842702a7"
+    },
+    {
+      "old": "scripts/multistate_hard_depth.py",
+      "new": "rescene/pipeline/multistate_hard_depth.py",
+      "old_sha256": "24c0001e439c86a4bde2aeac911e9427e7f3f410790e41f96507c72766e0b8a1",
+      "new_sha256": "1e3a030355d5336ea199fd77ca99d147ef7717ad3bd8afda8749ac701d360aa8"
+    },
+    {
+      "old": "scripts/real_multistate_common.py",
+      "new": "rescene/pipeline/real_multistate_common.py",
+      "old_sha256": "d7fe20b731125cc845fb5f6792c1f9b3b6f8c9120cc6abd4f36a36d88868fca5",
+      "new_sha256": "39575d112baa70ee3d7f4b6fb054b6eba1be797fd9f63f6e87894780591e5f07"
+    },
+    {
+      "old": "scripts/prepare_multistate_hard.py",
+      "new": "rescene/pipeline/prepare_multistate_hard.py",
+      "old_sha256": "5106ee74d5aeeaf096b803e1a1b32186fe6ca477cf1fb80f1428b55c87c93855",
+      "new_sha256": "dba61c5e8946a03558cd1bf90aa0dd51478791f743dc09b38d7ea01afc4633ac"
+    },
+    {
+      "old": "scripts/mast3r_depth_support.py",
+      "new": "rescene/pipeline/mast3r_depth_support.py",
+      "old_sha256": "b24156b0808194dedc3b4761110337a1861e8820874964296e1b20e2a3785845",
+      "new_sha256": "b24156b0808194dedc3b4761110337a1861e8820874964296e1b20e2a3785845"
+    },
+    {
+      "old": "scripts/ltgs_run_policy.py",
+      "new": "rescene/pipeline/runtime_policy.py",
+      "old_sha256": "f5f8b61de86b142a54158edc0ebcd9bdebd4d712d786d6519348d7723f422388",
+      "new_sha256": "e04070ef489988dffb86ea7ad0a167ebd6efa032045bb9f45380c06fb5be7168"
+    },
+    {
+      "old": "scripts/run_multistate_hard.py",
+      "new": "rescene/pipeline/run_multistate_hard.py",
+      "old_sha256": "647cc1746706ff962a221d04b9bb6935d6650c5a94333cb1c53bfb629dd5a943",
+      "new_sha256": "8a4cecdf75a5be430f199dbe375aa61565373a216f91902c69959e2659ab0b30"
+    },
+    {
+      "old": "scripts/report_real_multistate.py",
+      "new": "rescene/pipeline/report_real_multistate.py",
+      "old_sha256": "782b56e9173b2b212b536495b56eb7d7849aaea993634826a8c638edfe93e5c5",
+      "new_sha256": "782b56e9173b2b212b536495b56eb7d7849aaea993634826a8c638edfe93e5c5"
+    }
+  ]
+}

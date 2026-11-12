@@ -1,0 +1,57 @@
+[
+  {
+    "path": "external/LTGS",
+    "url": "https://github.com/mkjjang3598/LTGS.git",
+    "commit": "bba8beefc11ef524cf3dc947617298f748ec4f8d"
+  },
+  {
+    "path": "external/LTGS/gaussian-splatting",
+    "url": "https://github.com/mkjjang3598/gaussian-splatting.git",
+    "commit": "bec91fccfbe351dc85859037797224943e41a880"
+  },
+  {
+    "path": "external/LTGS/gaussian-splatting/submodules/diff-gaussian-rasterization",
+    "url": "https://github.com/graphdeco-inria/diff-gaussian-rasterization.git",
+    "commit": "26ce026ae9d3cfa56a103279b863a9f320c3e555"
+  },
+  {
+    "path": "external/LTGS/gaussian-splatting/submodules/diff-gaussian-rasterization/third_party/glm",
+    "url": "https://github.com/g-truc/glm.git",
+    "commit": "5c46b9c07008ae65cb81ab79cd677ecc1934b903"
+  },
+  {
+    "path": "external/LTGS/gaussian-splatting/submodules/simple-knn",
+    "url": "https://gitlab.inria.fr/bkerbl/simple-knn.git",
+    "commit": "86710c2d4b46680c02301765dd79e465819c8f19"
+  },
+  {
+    "path": "external/LTGS/gaussian-splatting/submodules/fused-ssim",
+    "url": "https://github.com/rahul-goel/fused-ssim.git",
+    "commit": "1272e21a282342e89537159e4bad508b19b34157"
+  },
+  {
+    "path": "external/LTGS/gaussian-splatting/submodules/flashsplat-rasterization",
+    "url": "https://github.com/florinshen/flashsplat-rasterization.git",
+    "commit": "b7698d2733fcecef2f2e46febdbf8e93735d2a00"
+  },
+  {
+    "path": "external/LTGS/submodules/Hierarchical-Localization",
+    "url": "https://github.com/cvg/Hierarchical-Localization.git",
+    "commit": "d0e8494e66fa63fc663cf6408c9e2d057af919ac"
+  },
+  {
+    "path": "external/LTGS/submodules/mast3r",
+    "url": "https://github.com/mkjjang3598/mast3r.git",
+    "commit": "0dc83cda357ed6a3f3b8baab12fdf1f5c7d63e17"
+  },
+  {
+    "path": "external/LTGS/submodules/mast3r/dust3r",
+    "url": "https://github.com/naver/dust3r",
+    "commit": "9869e71f9165aa53c53ec0979cea1122a569ade4"
+  },
+  {
+    "path": "external/LTGS/submodules/mast3r/dust3r/croco",
+    "url": "https://github.com/naver/croco",
+    "commit": "743ee71a2a9bf57cea6832a9064a70a0597fcfcb"
+  }
+]

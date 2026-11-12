@@ -1,0 +1,20 @@
+{
+  "t001": {
+    "symmetric_reprojection_median_px_at1600": 2.4714755540342512,
+    "p90": 6.08483681567604,
+    "reserved_validation_inlier_count": 25,
+    "pass": true
+  },
+  "t002": {
+    "symmetric_reprojection_median_px_at1600": 1.3925356741461226,
+    "p90": 2.26780848226995,
+    "reserved_validation_inlier_count": 16,
+    "pass": true
+  },
+  "t003": {
+    "symmetric_reprojection_median_px_at1600": 1.2047959228762408,
+    "p90": 9.043341568197835,
+    "reserved_validation_inlier_count": 22,
+    "pass": true
+  }
+}

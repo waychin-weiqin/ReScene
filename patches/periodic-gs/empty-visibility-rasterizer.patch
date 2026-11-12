@@ -1,0 +1,25 @@
+--- a/cuda_rasterizer/rasterizer_impl.cu
++++ b/cuda_rasterizer/rasterizer_impl.cu
+@@ -204,7 +204,10 @@
+ 	bool valid_tile = currtile != (uint32_t) -1;
+ 
+ 	if (idx == 0)
+-		ranges[currtile].x = 0;
++	{
++		// All opacity-culled entries may be the UINT_MAX sentinel.
++		if (valid_tile) ranges[currtile].x = 0;
++	}
+ 	else
+ 	{
+ 		uint32_t prevtile = point_list_keys[idx - 1] >> 32;
+--- a/cuda_rasterizer/backward.cu
++++ b/cuda_rasterizer/backward.cu
+@@ -760,6 +760,8 @@
+ 	float* dL_dinvdepths)
+ {
+ 	const int THREADS = 32;
++	// No contributing buckets: zero-initialized gradients are already correct.
++	if (B == 0) return;
+ 	PerGaussianRenderCUDA<NUM_CHANNELS_3DGS> <<<((B*32) + THREADS - 1) / THREADS,THREADS>>>(
+ 		ranges,
+ 		point_list,

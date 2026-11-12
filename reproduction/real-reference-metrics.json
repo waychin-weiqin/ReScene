@@ -1,0 +1,67 @@
+{
+  "sources": [
+    {
+      "file": "/scratch/wei/ChronoGS/artifacts/real-multistate-train-v1/results.json",
+      "sha256": "f286fe5093918f3eb92c6cf6cd5a913789321446da01aa358c7c0abc40acfea3"
+    },
+    {
+      "file": "/scratch/wei/ChronoGS/artifacts/real-multistate-train-v2/results.json",
+      "sha256": "859cd082c710401f920d70814cfaeda5fd717e12b444b85dbd29e1bcdd526f3b"
+    }
+  ],
+  "aggregation": "equal views within visit, equal visits within scene; all_period includes initial; archival recall equals arrival",
+  "scenes": {
+    "can": {
+      "all_period": {
+        "PSNR": 23.716808384115048,
+        "SSIM": 0.865680695754109,
+        "LPIPS": 0.3543037745875843
+      },
+      "later_only": {
+        "PSNR": 23.60494781262947,
+        "SSIM": 0.8629577334481057,
+        "LPIPS": 0.3613161017196347
+      },
+      "history_storage_bytes": 168441404
+    },
+    "tissue": {
+      "all_period": {
+        "PSNR": 24.257409782636735,
+        "SSIM": 0.8607089227272404,
+        "LPIPS": 0.30766838741089614
+      },
+      "later_only": {
+        "PSNR": 23.835270049080016,
+        "SSIM": 0.855153904137788,
+        "LPIPS": 0.31968339468751633
+      },
+      "history_storage_bytes": 176148412
+    },
+    "tomato": {
+      "all_period": {
+        "PSNR": 27.36436519271288,
+        "SSIM": 0.8823476259190685,
+        "LPIPS": 0.3320777065813159
+      },
+      "later_only": {
+        "PSNR": 26.952823252759426,
+        "SSIM": 0.8788147137269505,
+        "LPIPS": 0.34594398303291735
+      },
+      "history_storage_bytes": 149118460
+    },
+    "gimbal": {
+      "all_period": {
+        "PSNR": 26.279112402881893,
+        "SSIM": 0.8838888173183752,
+        "LPIPS": 0.29445673231892877
+      },
+      "later_only": {
+        "PSNR": 26.289568880247693,
+        "SSIM": 0.8815769484591862,
+        "LPIPS": 0.3059261595268571
+      },
+      "history_storage_bytes": 192289148
+    }
+  }
+}

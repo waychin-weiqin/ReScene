@@ -1,0 +1,41 @@
+{
+  "scope": "ReScene only; no baselines. Frozen accepted real camera transforms; training numerics unchanged. Portable paths, scene selection and GPU scheduling differ.",
+  "files": [
+    {
+      "file": "scripts/real_multistate_common.py",
+      "original_sha256": "2578a974aeb60c9cb33afa57a1349d9299616c37a14d68c2be698d6023463629",
+      "release_sha256": "d7fe20b731125cc845fb5f6792c1f9b3b6f8c9120cc6abd4f36a36d88868fca5"
+    },
+    {
+      "file": "scripts/real_multistate_adapter.py",
+      "original_sha256": "c97c184e21955922a174a863666fc056add334a3f935a0ca1a16fd63b7c22d7b",
+      "release_sha256": "69563c15bdf1ec2637981c97167e70d6667d73a775a4d4db9eefc654d6dceb1a"
+    },
+    {
+      "file": "scripts/real_multistate_depth.py",
+      "original_sha256": "5a83d70eea05cf7a27e664d28027c827955bb3ec773aefeaca116abdad8177bd",
+      "release_sha256": "d2dd226c22e2f265b59e61ab9adae8fa6cbcf65786b714d27a9309ae20ea953d"
+    },
+    {
+      "file": "scripts/real_multistate_initial_entry.py",
+      "original_sha256": "762eae58ce8045adb655f2c77fb62ff564be6affe6f65f730eb60f9c842702a7",
+      "release_sha256": "762eae58ce8045adb655f2c77fb62ff564be6affe6f65f730eb60f9c842702a7"
+    },
+    {
+      "file": "scripts/prepare_real_multistate.py",
+      "original_sha256": "9b1b963b738a6659deb23519543e0cc6c8d9210b77e964f31ab25db55f0d0cb0",
+      "release_sha256": "3e1a795f57fca6220452e617fd9b0750a9e8c25234e5dd0bb3dc6ba2509bba84"
+    },
+    {
+      "file": "scripts/run_real_multistate.py",
+      "original_sha256": "3be3e0b10a4e102852737d6aaaeee588114a02d5499d5197e0963faacecc19f6",
+      "release_sha256": "77d6484aade6b7ec2bbbf1f5a2ffafeed88b913bda1ee608cd0115df48756849"
+    },
+    {
+      "file": "scripts/report_real_multistate.py",
+      "original_sha256": "4a6e6970ebf0c8c128a6495b9324af100f3c369f39f3d6f89451badd633a2e3b",
+      "release_sha256": "782b56e9173b2b212b536495b56eb7d7849aaea993634826a8c638edfe93e5c5"
+    }
+  ],
+  "objective": "Original benchmark objective, including regularisers; not a revised-objective result."
+}

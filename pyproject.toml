@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rescene"
+version = "0.1.0"
+description = "Incremental scene chronology from sparse revisits"
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[project.scripts]
+rescene = "rescene.cli:main"
+
+[project.urls]
+Repository = "https://github.com/waychin-weiqin/ReScene"
+
+[tool.setuptools.packages.find]
+include = ["rescene*"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}

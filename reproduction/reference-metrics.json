@@ -1,0 +1,528 @@
+{
+  "source_results_sha256": "3d3c60d0acdb1ddd6d2d36c8db6e5f535a1e9a4729a32b5618749b6184863806",
+  "aggregation": "equal period within scene, includes period 0",
+  "scenes": {
+    "robot_transfer": {
+      "all_period": {
+        "PSNR": 36.14080880085627,
+        "SSIM": 0.9755228317032257,
+        "LPIPS": 0.050443459515615054
+      },
+      "later_only": {
+        "PSNR": 35.70035966959867,
+        "SSIM": 0.9746049920266325,
+        "LPIPS": 0.052712790011851626
+      },
+      "periods": [
+        {
+          "period": 0,
+          "metrics": {
+            "PSNR": 40.98574924468994,
+            "SSIM": 0.985619068145752,
+            "LPIPS": 0.025480824057012796
+          },
+          "births": 0,
+          "joint_psnr": null,
+          "update_seconds": 0
+        },
+        {
+          "period": 1,
+          "metrics": {
+            "PSNR": 36.42098522186279,
+            "SSIM": 0.9766506776213646,
+            "LPIPS": 0.04545300826430321
+          },
+          "births": 30246,
+          "joint_psnr": null,
+          "update_seconds": 67.00940893404186
+        },
+        {
+          "period": 2,
+          "metrics": {
+            "PSNR": 35.70028209686279,
+            "SSIM": 0.9743538200855255,
+            "LPIPS": 0.052293111803010106
+          },
+          "births": 12517,
+          "joint_psnr": null,
+          "update_seconds": 66.68152726907283
+        },
+        {
+          "period": 3,
+          "metrics": {
+            "PSNR": 35.689456939697266,
+            "SSIM": 0.9720093607902527,
+            "LPIPS": 0.05727888597175479
+          },
+          "births": 0,
+          "joint_psnr": null,
+          "update_seconds": 65.56741499202326
+        },
+        {
+          "period": 4,
+          "metrics": {
+            "PSNR": 37.056392669677734,
+            "SSIM": 0.9786231592297554,
+            "LPIPS": 0.041882568039000034
+          },
+          "births": 33029,
+          "joint_psnr": null,
+          "update_seconds": 68.12098320014775
+        },
+        {
+          "period": 5,
+          "metrics": {
+            "PSNR": 35.11658239364624,
+            "SSIM": 0.9753207191824913,
+            "LPIPS": 0.04854852822609246
+          },
+          "births": 30194,
+          "joint_psnr": null,
+          "update_seconds": 71.15565244900063
+        },
+        {
+          "period": 6,
+          "metrics": {
+            "PSNR": 34.86256980895996,
+            "SSIM": 0.9735886454582214,
+            "LPIPS": 0.05408363789319992
+          },
+          "births": 29495,
+          "joint_psnr": null,
+          "update_seconds": 72.76717936806381
+        },
+        {
+          "period": 7,
+          "metrics": {
+            "PSNR": 35.55510330200195,
+            "SSIM": 0.9744115024805069,
+            "LPIPS": 0.05409204540774226
+          },
+          "births": 34975,
+          "joint_psnr": null,
+          "update_seconds": 73.37845459207892
+        },
+        {
+          "period": 8,
+          "metrics": {
+            "PSNR": 35.98324155807495,
+            "SSIM": 0.9753555059432983,
+            "LPIPS": 0.053383752005174756
+          },
+          "births": 36965,
+          "joint_psnr": null,
+          "update_seconds": 77.162993832957
+        },
+        {
+          "period": 9,
+          "metrics": {
+            "PSNR": 35.2040696144104,
+            "SSIM": 0.973251573741436,
+            "LPIPS": 0.0587564455345273
+          },
+          "births": 24260,
+          "joint_psnr": null,
+          "update_seconds": 76.26393932662904
+        },
+        {
+          "period": 10,
+          "metrics": {
+            "PSNR": 35.150089502334595,
+            "SSIM": 0.9708271399140358,
+            "LPIPS": 0.065037134103477
+          },
+          "births": 35,
+          "joint_psnr": null,
+          "update_seconds": 72.6894418830052
+        },
+        {
+          "period": 11,
+          "metrics": {
+            "PSNR": 35.96518325805664,
+            "SSIM": 0.9762628078460693,
+            "LPIPS": 0.04903157288208604
+          },
+          "births": 43342,
+          "joint_psnr": null,
+          "update_seconds": 77.48623161530122
+        }
+      ],
+      "history_storage_bytes": 405363420
+    },
+    "teddy_coupled": {
+      "all_period": {
+        "PSNR": 32.45182342529297,
+        "SSIM": 0.9528952904045582,
+        "LPIPS": 0.06754724255297333
+      },
+      "later_only": {
+        "PSNR": 31.823573695288765,
+        "SSIM": 0.9497250881459978,
+        "LPIPS": 0.07165681679422657
+      },
+      "periods": [
+        {
+          "period": 0,
+          "metrics": {
+            "PSNR": 38.10607099533081,
+            "SSIM": 0.9814271107316017,
+            "LPIPS": 0.030561074381694198
+          },
+          "births": 0,
+          "joint_psnr": null,
+          "update_seconds": 0
+        },
+        {
+          "period": 1,
+          "metrics": {
+            "PSNR": 32.29245853424072,
+            "SSIM": 0.9534846842288971,
+            "LPIPS": 0.06325080199167132
+          },
+          "births": 23926,
+          "joint_psnr": null,
+          "update_seconds": 65.33548588119447
+        },
+        {
+          "period": 2,
+          "metrics": {
+            "PSNR": 31.857030153274536,
+            "SSIM": 0.9505703151226044,
+            "LPIPS": 0.06883751973509789
+          },
+          "births": 25299,
+          "joint_psnr": null,
+          "update_seconds": 68.52529083704576
+        },
+        {
+          "period": 3,
+          "metrics": {
+            "PSNR": 31.917053699493408,
+            "SSIM": 0.9518351405858994,
+            "LPIPS": 0.068409554194659
+          },
+          "births": 32753,
+          "joint_psnr": null,
+          "update_seconds": 72.20928043313324
+        },
+        {
+          "period": 4,
+          "metrics": {
+            "PSNR": 31.615012407302856,
+            "SSIM": 0.9477935880422592,
+            "LPIPS": 0.07425543386489153
+          },
+          "births": 2799,
+          "joint_psnr": null,
+          "update_seconds": 70.09625390311703
+        },
+        {
+          "period": 5,
+          "metrics": {
+            "PSNR": 31.350752592086792,
+            "SSIM": 0.9447077065706253,
+            "LPIPS": 0.07898521609604359
+          },
+          "births": 14188,
+          "joint_psnr": null,
+          "update_seconds": 71.55795361613855
+        },
+        {
+          "period": 6,
+          "metrics": {
+            "PSNR": 31.359034776687622,
+            "SSIM": 0.944945439696312,
+            "LPIPS": 0.07830902468413115
+          },
+          "births": 17790,
+          "joint_psnr": null,
+          "update_seconds": 73.28828939981759
+        },
+        {
+          "period": 7,
+          "metrics": {
+            "PSNR": 32.128774642944336,
+            "SSIM": 0.9528997763991356,
+            "LPIPS": 0.0687616029754281
+          },
+          "births": 29283,
+          "joint_psnr": null,
+          "update_seconds": 75.79128841124475
+        },
+        {
+          "period": 8,
+          "metrics": {
+            "PSNR": 31.873779773712158,
+            "SSIM": 0.9496817588806152,
+            "LPIPS": 0.07411743188276887
+          },
+          "births": 18099,
+          "joint_psnr": null,
+          "update_seconds": 74.74588707229123
+        },
+        {
+          "period": 9,
+          "metrics": {
+            "PSNR": 32.018266677856445,
+            "SSIM": 0.951607383787632,
+            "LPIPS": 0.06998476572334766
+          },
+          "births": 30046,
+          "joint_psnr": null,
+          "update_seconds": 74.88198812911287
+        }
+      ],
+      "history_storage_bytes": 322106468
+    },
+    "plant_motion": {
+      "all_period": {
+        "PSNR": 30.866589784622192,
+        "SSIM": 0.9437754221260548,
+        "LPIPS": 0.0828846020391211
+      },
+      "later_only": {
+        "PSNR": 30.106993410322403,
+        "SSIM": 0.9397943226827515,
+        "LPIPS": 0.0886391579794387
+      },
+      "periods": [
+        {
+          "period": 0,
+          "metrics": {
+            "PSNR": 37.70295715332031,
+            "SSIM": 0.9796053171157837,
+            "LPIPS": 0.031093598576262593
+          },
+          "births": 0,
+          "joint_psnr": null,
+          "update_seconds": 0
+        },
+        {
+          "period": 1,
+          "metrics": {
+            "PSNR": 32.361687898635864,
+            "SSIM": 0.9553511738777161,
+            "LPIPS": 0.0626232554204762
+          },
+          "births": 7144,
+          "joint_psnr": null,
+          "update_seconds": 69.24641402391717
+        },
+        {
+          "period": 2,
+          "metrics": {
+            "PSNR": 31.461764812469482,
+            "SSIM": 0.9488533735275269,
+            "LPIPS": 0.07488614181056619
+          },
+          "births": 8521,
+          "joint_psnr": null,
+          "update_seconds": 67.25836481479928
+        },
+        {
+          "period": 3,
+          "metrics": {
+            "PSNR": 30.46819019317627,
+            "SSIM": 0.9429104626178741,
+            "LPIPS": 0.08127321302890778
+          },
+          "births": 10652,
+          "joint_psnr": null,
+          "update_seconds": 67.70365186501294
+        },
+        {
+          "period": 4,
+          "metrics": {
+            "PSNR": 30.18711757659912,
+            "SSIM": 0.9412088021636009,
+            "LPIPS": 0.08649097243323922
+          },
+          "births": 11115,
+          "joint_psnr": null,
+          "update_seconds": 69.12795692682266
+        },
+        {
+          "period": 5,
+          "metrics": {
+            "PSNR": 29.605292081832886,
+            "SSIM": 0.9380457475781441,
+            "LPIPS": 0.09049979085102677
+          },
+          "births": 12133,
+          "joint_psnr": null,
+          "update_seconds": 71.08475122973323
+        },
+        {
+          "period": 6,
+          "metrics": {
+            "PSNR": 29.769447565078735,
+            "SSIM": 0.9379540085792542,
+            "LPIPS": 0.09175507631152868
+          },
+          "births": 11016,
+          "joint_psnr": null,
+          "update_seconds": 69.21678934665397
+        },
+        {
+          "period": 7,
+          "metrics": {
+            "PSNR": 29.261040925979614,
+            "SSIM": 0.9340211674571037,
+            "LPIPS": 0.09776213439181447
+          },
+          "births": 10753,
+          "joint_psnr": null,
+          "update_seconds": 68.74331138003618
+        },
+        {
+          "period": 8,
+          "metrics": {
+            "PSNR": 28.964876890182495,
+            "SSIM": 0.9306114837527275,
+            "LPIPS": 0.10422446206212044
+          },
+          "births": 9237,
+          "joint_psnr": null,
+          "update_seconds": 70.70800594706088
+        },
+        {
+          "period": 9,
+          "metrics": {
+            "PSNR": 28.883522748947144,
+            "SSIM": 0.9291926845908165,
+            "LPIPS": 0.10823737550526857
+          },
+          "births": 9039,
+          "joint_psnr": null,
+          "update_seconds": 73.58497279696167
+        }
+      ],
+      "history_storage_bytes": 321717348
+    },
+    "cloth_fold": {
+      "all_period": {
+        "PSNR": 31.388217163085937,
+        "SSIM": 0.9581699535250664,
+        "LPIPS": 0.0664184037828818
+      },
+      "later_only": {
+        "PSNR": 30.854638046688503,
+        "SSIM": 0.9556036310063468,
+        "LPIPS": 0.06958488281816244
+      },
+      "periods": [
+        {
+          "period": 0,
+          "metrics": {
+            "PSNR": 36.19042921066284,
+            "SSIM": 0.9812668561935425,
+            "LPIPS": 0.03792009246535599
+          },
+          "births": 0,
+          "joint_psnr": null,
+          "update_seconds": 0
+        },
+        {
+          "period": 1,
+          "metrics": {
+            "PSNR": 31.2374746799469,
+            "SSIM": 0.9538852646946907,
+            "LPIPS": 0.06707957619801164
+          },
+          "births": 15494,
+          "joint_psnr": null,
+          "update_seconds": 71.06692217895761
+        },
+        {
+          "period": 2,
+          "metrics": {
+            "PSNR": 31.465095281600952,
+            "SSIM": 0.9564209133386612,
+            "LPIPS": 0.06538082798942924
+          },
+          "births": 49530,
+          "joint_psnr": null,
+          "update_seconds": 79.60871153092012
+        },
+        {
+          "period": 3,
+          "metrics": {
+            "PSNR": 28.24499750137329,
+            "SSIM": 0.9321214854717255,
+            "LPIPS": 0.0885621509514749
+          },
+          "births": 60000,
+          "joint_psnr": null,
+          "update_seconds": 84.00352739589289
+        },
+        {
+          "period": 4,
+          "metrics": {
+            "PSNR": 30.71842122077942,
+            "SSIM": 0.9579519182443619,
+            "LPIPS": 0.07157899346202612
+          },
+          "births": 42826,
+          "joint_psnr": null,
+          "update_seconds": 85.24506354471669
+        },
+        {
+          "period": 5,
+          "metrics": {
+            "PSNR": 31.261987924575806,
+            "SSIM": 0.9627079963684082,
+            "LPIPS": 0.06734227063134313
+          },
+          "births": 30133,
+          "joint_psnr": null,
+          "update_seconds": 82.21154373697937
+        },
+        {
+          "period": 6,
+          "metrics": {
+            "PSNR": 31.393539905548096,
+            "SSIM": 0.9657030627131462,
+            "LPIPS": 0.06530502112582326
+          },
+          "births": 15965,
+          "joint_psnr": null,
+          "update_seconds": 80.31715564010665
+        },
+        {
+          "period": 7,
+          "metrics": {
+            "PSNR": 31.1318199634552,
+            "SSIM": 0.9608559384942055,
+            "LPIPS": 0.0659764395095408
+          },
+          "births": 35938,
+          "joint_psnr": null,
+          "update_seconds": 85.0910651483573
+        },
+        {
+          "period": 8,
+          "metrics": {
+            "PSNR": 30.280444622039795,
+            "SSIM": 0.9498622119426727,
+            "LPIPS": 0.07221361575648189
+          },
+          "births": 60000,
+          "joint_psnr": null,
+          "update_seconds": 88.57803669199347
+        },
+        {
+          "period": 9,
+          "metrics": {
+            "PSNR": 31.957961320877075,
+            "SSIM": 0.9609238877892494,
+            "LPIPS": 0.06282504973933101
+          },
+          "births": 50958,
+          "joint_psnr": null,
+          "update_seconds": 91.05302327685058
+        }
+      ],
+      "history_storage_bytes": 427908196
+    }
+  }
+}
