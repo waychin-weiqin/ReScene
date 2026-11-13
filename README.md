@@ -25,8 +25,8 @@ Extract the Multi-State release and retain its original images, camera files and
 
 | Subset | Scenes | Dataset directory |
 |---|---|---|
-| Synthetic | Robot, Teddy, Plant, Cloth | `multistate_hard` |
-| Real | Can, Tissue, Tomato, Gimbal | `wei_real_multistate_20261030` |
+| Synthetic | Robot, Teddy, Plant, Cloth | `multistate_synthetic` |
+| Real | Can, Tissue, Tomato, Gimbal | `multistate_real` |
 
 See the [synthetic](examples/synthetic.md) and [real](examples/real.md) guides for the directory layouts and camera preparation.
 
@@ -37,14 +37,14 @@ Prepare the dataset, then train and evaluate the sequence.
 ### Synthetic Multi-State
 
 ```bash
-python examples/synthetic.py prepare --dataset-root /path/to/multistate_hard --gpus 0
+python examples/synthetic.py prepare --dataset-root /path/to/multistate_synthetic --gpus 0
 python examples/synthetic.py run --gpus 0
 ```
 
 ### Real Multi-State
 
 ```bash
-python examples/real.py prepare --dataset-root /path/to/wei_real_multistate_20261030 --gpus 0
+python examples/real.py prepare --dataset-root /path/to/multistate_real --gpus 0
 python examples/real.py run --gpus 0
 ```
 

@@ -7,7 +7,7 @@ The real subset contains Can, Tissue, Tomato and Gimbal, each with four visits.
 Use the original release with this layout:
 
 ```text
-wei_real_multistate_20261030/
+multistate_real/
   dataset/
     can/t000/{images,sparse/0,train.txt,test.txt}
     can/t001/...
@@ -25,7 +25,7 @@ The supplied SfM reconstruction used all images, including held-out views. Backg
 After [installation](../README.md#installation), run:
 
 ```bash
-python examples/real.py prepare --dataset-root /path/to/wei_real_multistate_20261030 --gpus 0
+python examples/real.py prepare --dataset-root /path/to/multistate_real --gpus 0
 python examples/real.py run --gpus 0
 python eval/multistate.py --subset real
 ```

@@ -6,7 +6,7 @@ from multistate_hard_common import *
 def prepare_raw():
  spec=importlib.util.spec_from_file_location('rw',R/'external/LTGS/submodules/Hierarchical-Localization/hloc/utils/read_write_model.py');rw=importlib.util.module_from_spec(spec);spec.loader.exec_module(rw)
  for s in SCENES:
-  src=R/'data/multistate_hard/dataset'/s;dst=D/'raw-adapter'/s
+  src=R/'data/multistate_synthetic/dataset'/s;dst=D/'raw-adapter'/s
   cams0=None;images={};points={};split=[];tests=[];audit={}
   for t in range(STATE_COUNTS[s]):
    state=src/f't{t:03d}';cams=rw.read_cameras_binary(state/'sparse/0/cameras.bin');ims=rw.read_images_binary(state/'sparse/0/images.bin');pts=rw.read_points3D_binary(state/'sparse/0/points3D.bin') if t==0 else {};test=set((state/'sparse/0/test.txt').read_text().splitlines());assert len(test)==8 and len(ims)==60

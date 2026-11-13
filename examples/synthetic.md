@@ -7,7 +7,7 @@ The synthetic subset contains Robot, Teddy, Plant and Cloth. Robot has 12 visits
 Extract the release into this layout:
 
 ```text
-multistate_hard/
+multistate_synthetic/
   manifest.json
   dataset/
     robot_transfer/t000/{images,sparse/0,...}
@@ -24,7 +24,7 @@ Preparation uses the supplied camera poses and splits. The initial point cloud c
 After [installation](../README.md#installation), run:
 
 ```bash
-python examples/synthetic.py prepare --dataset-root /path/to/multistate_hard --gpus 0
+python examples/synthetic.py prepare --dataset-root /path/to/multistate_synthetic --gpus 0
 python examples/synthetic.py run --gpus 0
 python eval/multistate.py --subset synthetic
 ```

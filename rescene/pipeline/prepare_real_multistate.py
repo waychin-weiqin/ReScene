@@ -8,7 +8,7 @@ def main():
  from real_multistate_adapter import prepare_raw
  prepare_raw()
  spec=importlib.util.spec_from_file_location('rw',R/'external/LTGS/submodules/Hierarchical-Localization/hloc/utils/read_write_model.py');rw=importlib.util.module_from_spec(spec);spec.loader.exec_module(rw)
- jobs={};inputs={str(R/'data/real-multistate/wei_real_multistate_20261030/SHA256SUMS'):sha(R/'data/real-multistate/wei_real_multistate_20261030/SHA256SUMS')}
+ jobs={};inputs={str(R/'data/multistate_real/SHA256SUMS'):sha(R/'data/multistate_real/SHA256SUMS')}
  for s in SCENES:
   src=D/'raw-adapter'/s;cams,ims,pts=rw.read_model(src/'sparse/0',ext='.bin');period={n:int(t) for n,t in (ln.rsplit(maxsplit=1) for ln in (src/'sparse/split.txt').read_text().splitlines() if ln.strip())};tests=set((src/'sparse/0/test.txt').read_text().splitlines());assert tests<=set(period)
   assert set(im.name for im in ims.values())==set(period)

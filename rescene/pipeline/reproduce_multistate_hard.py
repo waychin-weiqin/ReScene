@@ -9,7 +9,7 @@ if a.action=='prepare':
  src=a.dataset_root.expanduser().resolve();assert all((src/f).exists() for f in ['dataset','manifest.json','SHA256SUMS']),src
  expected=json.loads((R/'rescene/reproduction/dataset-release.json').read_text())
  for f,key in [('manifest.json','manifest_sha256'),('SHA256SUMS','sha256sums_sha256')]:assert hashlib.sha256((src/f).read_bytes()).hexdigest()==expected[key],f'Dataset release differs: {f}'
- link=R/'data/multistate_hard';link.parent.mkdir(exist_ok=True)
+ link=R/'data/multistate_synthetic';link.parent.mkdir(exist_ok=True)
  if link.exists():assert link.resolve()==src,'Refusing to replace dataset link'
  else:link.symlink_to(src,target_is_directory=True)
  script='prepare_multistate_hard.py'

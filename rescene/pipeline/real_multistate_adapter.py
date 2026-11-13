@@ -4,7 +4,7 @@ from real_multistate_common import *
 def prepare_raw():
  spec=importlib.util.spec_from_file_location('rw',R/'external/LTGS/submodules/Hierarchical-Localization/hloc/utils/read_write_model.py');rw=importlib.util.module_from_spec(spec);spec.loader.exec_module(rw)
  for s in SCENES:
-  src=R/'data/real-multistate/wei_real_multistate_20261030/dataset'/s;dst=D/'raw-adapter'/s
+  src=R/'data/multistate_real/dataset'/s;dst=D/'raw-adapter'/s
   alignpath=R/'rescene/reproduction/real-alignment'/s/'alignment.json';al=read(alignpath);review=read(alignpath.parent/'reprojection-review.json');assert len(review)==3 and all(x['pass'] for x in review.values())
   cameras={};images={};points={};split=[];tests=[];audit={};idmaps={}
   for t in range(STATE_COUNTS[s]):
