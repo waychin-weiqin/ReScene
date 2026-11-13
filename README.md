@@ -3,8 +3,7 @@
 <blockquote>
   <p>
     Wei Qin Chuah · Zeji Hui · Amirali Khodadadian Gostar · Alireza Bab-Hadiashar<br>
-    <sub>RMIT University</sub><br>
-    <code>{wei.qin.chuah, zeji.hui, amirali.khodadadian, alireza.bab-hadiashar}@rmit.edu.au</code>
+    <sub>RMIT University</sub>
   </p>
 </blockquote>
 
