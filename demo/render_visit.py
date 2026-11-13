@@ -10,7 +10,7 @@ if __name__ == '__main__':
     p.add_argument('--gpu',type=int,default=0)
     a=p.parse_args();run=a.run.resolve()
     cfg=json.loads((run/'config.json').read_text());assert a.visit in cfg['periods']
-    tag='multistate_hard-simple60-v1' if a.subset=='synthetic' else 'rescene-real-reproduction'
+    tag='rescene-synthetic-photo-v1' if a.subset=='synthetic' else 'rescene-real-photo-v1'
     protocol=json.loads((ROOT/'artifacts'/tag/'protocol.json').read_text())
     import hashlib
     for name,digest in protocol['sources'].items():

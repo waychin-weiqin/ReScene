@@ -14,17 +14,10 @@ class Update(nn.Module):
  def __init__(self,old,seeds,eligible,evidence,center,extent,period,refine_ids,appearance_mode="global"):
   super().__init__();self.old=old;self.seeds=seeds;self.ids=eligible;self.evidence=evidence;self.center=center;self.extent=extent;self.period=period;self.field=Field().cuda()
   self.refine_ids=refine_ids
-  confidence=(1-evidence[refine_ids,0])*evidence[refine_ids,2]
-  self.register_buffer('refinement_weights',(1+9*(1-confidence.clamp(0,1))).detach())
   m=len(refine_ids);self.old_xyz_delta=nn.Parameter(torch.zeros(m,3,device='cuda'));self.old_scale_delta=nn.Parameter(torch.zeros(m,3,device='cuda'));self.appearance_mode=appearance_mode
   if appearance_mode=='local':self.old_rgb_delta=nn.Parameter(torch.zeros(m,1,3,device='cuda'))
   else:self.register_buffer('old_rgb_delta',torch.zeros(m,1,3,device='cuda'))
   self.log_gain=nn.Parameter(torch.zeros(3,device='cuda'));self.bias=nn.Parameter(torch.zeros(3,device='cuda'))
-  if appearance_mode=='local' and m>1:
-   from scipy.spatial import cKDTree
-   import numpy as np
-   pts=old['xyz'][refine_ids].detach().cpu().numpy();near=cKDTree(pts).query(pts,k=2,workers=4)[1][:,1];self.register_buffer('neighbor',torch.as_tensor(near,device='cuda',dtype=torch.long))
-  else:self.register_buffer('neighbor',torch.arange(m,device='cuda'))
   n=len(seeds['xyz']);self.xyz_delta=nn.Parameter(torch.zeros(n,3,device='cuda'));self.scale_delta=nn.Parameter(torch.zeros(n,3,device='cuda'));self.rgb_delta=nn.Parameter(torch.zeros(n,1,3,device='cuda'));self.rot_delta=nn.Parameter(torch.zeros(n,4,device='cuda'));self.birth_logits=nn.Parameter(torch.full((n,1),-2.1972246,device='cuda'))
  def values(self):
   old=self.old;ids=self.ids;rgb=(old['features_dc'][ids,0]*.28209479177387814+.5).clamp(0,1)
@@ -41,8 +34,6 @@ class Update(nn.Module):
   return dict(xyz=old['xyz'][ids]+old['scaling'][ids].exp()*self.old_xyz_delta,
               scaling=old['scaling'][ids]+self.old_scale_delta,
               features_dc=old['features_dc'][ids]+self.old_rgb_delta)
- def refinement_penalty(self):
-  return sum((v.square()*self.refinement_weights[:,None]).sum()/max(1,v.numel()) for v in (self.old_xyz_delta,self.old_scale_delta))
  def forward(self):
   alpha,birth,gate=self.values();old=dict(self.old)
   for k,v in self.refined().items():old[k]=old[k].index_copy(0,self.refine_ids,v)
@@ -51,9 +42,3 @@ class Update(nn.Module):
 
  def correct(self,rgb):
   return self.log_gain.exp()[:,None,None]*rgb+self.bias[:,None,None]
- def appearance_penalty(self):
-  global_reg=self.log_gain.square().mean()+self.bias.square().mean()
-  local=self.old_rgb_delta*.28209479177387814
-  local_reg=(local.square()*self.refinement_weights[:,None,None]).sum()/max(1,local.numel())
-  smooth=(local-local[self.neighbor]).square().sum()/max(1,local.numel())
-  return global_reg,local_reg,smooth

@@ -1,7 +1,7 @@
 """Isolated ChronoScene pilot bookkeeping (no model changes)."""
 from pathlib import Path
 import json,hashlib,os
-R=Path(__file__).resolve().parents[2];TAG='multistate_hard-simple60-v1';A=R/'artifacts'/TAG;O=R/'outputs'/TAG;D=R/'data'/TAG
+R=Path(__file__).resolve().parents[2];TAG='rescene-synthetic-photo-v1';A=R/'artifacts'/TAG;O=R/'outputs'/TAG;D=R/'data'/TAG
 SCENES=['robot_transfer','teddy_coupled','plant_motion','cloth_fold']
 ALL_SCENES=SCENES.copy()
 SCENES=os.environ.get('GSVER_SCENES',','.join(SCENES)).split(',')

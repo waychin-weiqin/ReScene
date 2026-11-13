@@ -12,8 +12,6 @@ class Update(Base):
    start=1-.05*self.evidence[ids,0:1];gate=torch.sigmoid(raw+torch.logit(start.clamp(1e-7,1-1e-7)))
    alpha=self.old['opacity'].index_copy(0,ids,self.old['opacity'][ids]*gate)
   return alpha,birth,gate
- def preservation(self,gate):
-  return ((1-self.evidence[self.ids,0:1])*(1-gate).square()).mean() if self.arm=='soft' else gate.new_zeros(())
  @torch.no_grad()
  def split_births(self,opt,importance,support,cap=30000):
   _,birth,_=self.values();n=len(birth['xyz']);cand=((birth['opacity'][:,0]>.05)&(importance>0)).nonzero().flatten();count=min(cap-n,max(1,n//10),len(cand))

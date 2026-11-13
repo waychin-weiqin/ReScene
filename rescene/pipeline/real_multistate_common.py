@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,os
-R=Path(__file__).resolve().parents[2];TAG='rescene-real-reproduction';A=R/'artifacts'/TAG;O=R/'outputs'/TAG/'rescene';D=R/'data'/TAG
+R=Path(__file__).resolve().parents[2];TAG='rescene-real-photo-v1';A=R/'artifacts'/TAG;O=R/'outputs'/TAG/'rescene';D=R/'data'/TAG
 ALL_SCENES=['can','tissue','tomato','gimbal']
 SCENES=os.environ.get('RESCENE_SCENES',','.join(ALL_SCENES)).split(',')
 assert SCENES and set(SCENES)<=set(ALL_SCENES)

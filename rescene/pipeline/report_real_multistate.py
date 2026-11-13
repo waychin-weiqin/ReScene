@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image,ImageDraw
 from real_multistate_common import *
 def main():
- p=freeze();rows=[];scenes={};missing=[];gallery=O/'comparison';gallery.mkdir(exist_ok=True);html=['<h1>Multi-State: GT | versioned simple60, 24 current training views</h1><p>Supplied all-view SfM and offline TRAIN alignment; real initial SfM points; later depths estimated by MASt3R.</p>'];lines=['# Real Multi-State simple60','','Supplied real heldouts; up-to24currentRGB,5000steps/update,standard3DGS initial30k nominal. No period0 update. Immutable versioned history rerendered after every update. All-view calibration and offline TRAIN alignment disclosed.','','| Scene | Period | PSNR | SSIM | LPIPS | Births |','|---|---:|---:|---:|---:|---:|']
+ p=freeze();rows=[];scenes={};missing=[];gallery=O/'comparison';gallery.mkdir(exist_ok=True);html=['<h1>Multi-State: GT | ReScene, 24 current training views</h1><p>Supplied all-view SfM and offline TRAIN alignment; real initial SfM points; later depths estimated by MASt3R.</p>'];lines=['# Real Multi-State ReScene','','Supplied real heldouts; up-to24currentRGB,5000steps/update,standard3DGS initial30k nominal. No period0 update. Immutable versioned history rerendered after every update. All-view calibration and offline TRAIN alignment disclosed.','','| Scene | Period | PSNR | SSIM | LPIPS | Births |','|---|---:|---:|---:|---:|---:|']
  for s,j in p['jobs'].items():
   run=O/s/'full';last=max(j['periods'])
   if not (run/f'eval-{last}-after-{last}.done.json').exists():missing.append(s);continue

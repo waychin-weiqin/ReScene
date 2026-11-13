@@ -1,0 +1,26 @@
+{
+  "objective": "photometric_plus_preservation",
+  "scope": "ReScene release update training; initial 3DGS fitting unchanged",
+  "removed": [
+    "refinement offset penalty",
+    "birth opacity penalty",
+    "birth geometry penalty",
+    "appearance magnitude and smoothness penalties",
+    "retirement penalty",
+    "soft opacity preservation prior"
+  ],
+  "retained": [
+    "changed/refinement/stable masked L1+SSIM",
+    "stable image-preservation L1",
+    "birth position and scale bounds",
+    "evidence-bounded opacity suppression",
+    "adaptive splitting"
+  ],
+  "historical_reference_metrics": "reference-metrics.json and real-reference-metrics.json use the original regularised objective and are not expected results for this revision",
+  "validation": {
+    "cpu_actual_worker_loss": "passed value and finite image/gain/bias gradients with nonempty and empty masks",
+    "full_training_rerun": false,
+    "runtime_imports": "passed including renderer, MASt3R and CUDA availability",
+    "crop_intrinsics": "passed"
+  }
+}

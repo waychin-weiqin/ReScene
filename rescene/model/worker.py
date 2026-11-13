@@ -30,17 +30,15 @@ def main():
    photo,preserve=objective(pred,targets[n],model.correct(refs[n]),change,stable*(1-rm))
    refine_photo,_=objective(pred,targets[n],refs[n],rm,torch.zeros_like(stable))
    stable_photo,_=objective(pred,targets[n],model.correct(refs[n]),stable,torch.zeros_like(stable))
-   global_reg,local_reg,smooth_reg=model.appearance_penalty()
-   refine_penalty=model.refinement_penalty()
-   retire=((1-gate[:,0])*(2-evidence[ids,0])).sum()/max(1,len(ids));add=(birth['opacity'][:,0]*(2-birth_support)).sum()/max(1,len(birth_support));geometry=(model.xyz_delta.square().sum()+model.scale_delta.square().sum())/max(1,model.xyz_delta.numel())
-   loss=photo+cfg['refine_photo_weight']*refine_photo+cfg['refine_penalty_weight']*refine_penalty+cfg['static_weight']*preserve+cfg['retirement_weight']*retire+cfg['birth_weight']*add+cfg['geometry_weight']*geometry
-   loss=loss+cfg['appearance_photo_weight']*stable_photo+cfg['global_appearance_weight']*global_reg+cfg['local_appearance_weight']*(local_reg+smooth_reg)
-   loss=loss+cfg['soft_preservation_weight']*model.preservation(gate)
+   # Photometric supervision in changed, refined and stable regions,
+   # plus preservation of the previous rendering at stable current-view pixels.
+   loss=(photo+cfg['refine_photo_weight']*refine_photo
+         +cfg['appearance_photo_weight']*stable_photo+cfg['static_weight']*preserve)
    assert torch.isfinite(loss);loss.backward();importance+=model.xyz_delta.grad.detach().norm(dim=-1);grad=torch.nn.utils.clip_grad_norm_(model.parameters(),10,error_if_nonfinite=True);opt.step()
    if cfg['arm']=='adaptive' and step in cfg['split_steps']:
     birth_support,event=model.split_births(opt,importance,birth_support,cfg['max_births']);event['step']=step;topology.append(event);seeds=model.seeds;importance=torch.zeros(len(seeds['xyz']),device='cuda');dump(a.run/'topology.json',topology)
    if step==1 or step%25==0 or step==steps:
-    row=dict(stable_photo=float(stable_photo),global_reg=float(global_reg),local_reg=float(local_reg),smooth_reg=float(smooth_reg),refine_photo=float(refine_photo),refine_penalty=float(refine_penalty),step=step,camera=n,preserve=float(preserve),loss=float(loss),photo=float(photo),retirement=float(retire),birth_opacity=float(add),gradient=float(grad));logs.append(row);print(json.dumps(row),flush=True)
+    row=dict(stable_photo=float(stable_photo),refine_photo=float(refine_photo),step=step,camera=n,preserve=float(preserve),loss=float(loss),photo=float(photo),gradient=float(grad));logs.append(row);print(json.dumps(row),flush=True)
    if step in cfg['checkpoints'] and step<steps:
     save(a.run/f'checkpoint_p{a.period:04d}_s{step:05d}.pt',dict(period=a.period,step=step,model=cpu(model.state_dict()),refine_ids=refine_ids.cpu(),seeds=cpu(seeds),eligible=ids.cpu(),evidence=evidence[ids].cpu(),center=center.cpu(),extent=extent.cpu(),note='diagnostic checkpoint; full optimizer state not stored'))
   with torch.no_grad():
@@ -57,7 +55,7 @@ def main():
   for k in expected:assert torch.equal(rebuilt[k],torch.cat((expected[k],birth[k]),0)),k
   del rebuilt,expected
   assert history=={p:sha(p) for p in history};assert accessed=={str((src/'images'/n).resolve()) for n in names}
-  dump(a.run/f'train_{a.period:04d}.json',dict(arm=cfg['arm'],topology=topology,refinement=refine_stats,period=a.period,steps=steps,names=names,accessed_real_rgb=sorted(accessed),historical_hashes=history,births_kept=int(keep.sum()),old_zeroed=int(((old['opacity']>0)&(alpha==0)).sum()),mean_gate=float(gate.sum()/max(1,gate.numel())),seconds=time.monotonic()-start,peak_vram=torch.cuda.max_memory_allocated(),losses=logs));return
+  dump(a.run/f'train_{a.period:04d}.json',dict(objective=cfg['objective'],arm=cfg['arm'],topology=topology,refinement=refine_stats,period=a.period,steps=steps,names=names,accessed_real_rgb=sorted(accessed),historical_hashes=history,births_kept=int(keep.sum()),old_zeroed=int(((old['opacity']>0)&(alpha==0)).sum()),mean_gate=float(gate.sum()/max(1,gate.numel())),seconds=time.monotonic()-start,peak_vram=torch.cuda.max_memory_allocated(),losses=logs));return
  # Evaluation is a separate process; no evaluation RGB enters updates.
  import lpips
  from PIL import Image

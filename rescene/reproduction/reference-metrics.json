@@ -524,5 +524,8 @@
       ],
       "history_storage_bytes": 427908196
     }
-  }
+  },
+  "objective": "original_regularised",
+  "applies_to_current_default": false,
+  "note": "Historical benchmark results, not measurements of the current photometric-plus-preservation objective."
 }

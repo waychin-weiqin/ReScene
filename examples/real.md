@@ -1,38 +1,46 @@
-# Reproducing ReScene on real Multi-State
+# Real Multi-State
 
-This pipeline includes ReScene only. It uses the accepted Can, Tissue, Tomato and Gimbal sequences, each with four visits. Shirt and Hulkbuster are excluded. Use the environment and pinned dependencies in [the synthetic reproduction guide](synthetic.md).
+The real subset contains Can, Tissue, Tomato and Gimbal, each with four visits.
 
-## Inputs and calibration
+## Data preparation
 
-Obtain the original `wei_real_multistate_20261030` release separately. The extracted directory must contain `SHA256SUMS` and `dataset/<scene>/t000/` through `t003/`, with images, COLMAP `sparse/0` binaries, `train.txt` and `test.txt`. Datasets and models are not included in this repository.
+Use the original release with this layout:
 
-`rescene/reproduction/real-alignment/` contains the accepted transforms into the initial coordinate frame and their reserved-correspondence reprojection checks. Can, Tissue and Tomato use alignment v2; Gimbal uses v1. The adapter verifies the camera, point and split file hashes before applying these transforms, checks camera projection invariance and assigns distinct camera IDs across visits. Do not apply these transforms to an already aligned or corrected dataset.
-
-The supplied SfM used all images, including held-out views. Alignment used training images from multiple visits and persistent background structure. This is offline registration, not causal pose estimation. Scale is arbitrary and there is no ground-truth real geometry. These limitations apply to the reported results.
-
-## Frozen benchmark settings
-
-- All initial training images, with initial SfM points observed in at least two initial training views. Later SfM points do not seed the initial model.
-- Standard 3DGS initial fitting for 30,000 nominal iterations (29,999 optimiser steps under the retained upstream loop).
-- Up to 24 current training images at each later visit, chosen by a lexical first camera followed by farthest-camera-centre selection. Official held-out splits are preserved.
-- MASt3R depth from current images with fixed registered cameras, crop-aware intrinsics and invalidation outside the crop.
-- 5,000 update steps, seed 0, original simple60 configuration, 30,000 initial birth proposals, 60,000 maximum births and eight splitting rounds.
-- The original benchmark objective includes its regularisation terms. It must not be described as reproducing a photometric-plus-preservation-only variant. No experimental unbounded gate, mask replacement or birth-limit sweep is substituted for the benchmark method.
-
-## Commands
-
-Run from this repository in the `chronogs` environment. Choose the scene list and GPU IDs during preparation and retain them for subsequent commands. No training starts during preparation.
-
-```bash
-python examples/real.py prepare \
-  --dataset-root /path/to/wei_real_multistate_20261030 --gpus 0
-python examples/real.py smoke --gpus 0
-python examples/real.py run --gpus 0
-python examples/real.py report
+```text
+wei_real_multistate_20261030/
+  SHA256SUMS
+  dataset/
+    can/t000/{images,sparse/0,train.txt,test.txt}
+    can/t001/...
+    tissue/...
+    tomato/...
+    gimbal/...
 ```
 
-The smoke action performs the full initial fit, then two three-step updates per scene. It is not a quick CPU test. The run action reuses validated stages and continues the full histories. A failed stage blocks unchanged retries. Up to two GPU workers use shared leases; at least 104 GiB of free storage is required. Run preparation once per frozen configuration. Source changes require a documented migration or a fresh checkout/output root.
+The supplied transforms align each visit to the initial coordinate frame using persistent background structure. Preparation verifies the camera and split files before applying these transforms. Use the original camera files rather than an already transformed dataset.
 
-Outputs are written to `outputs/rescene-real-reproduction/rescene/`. Protocols, source snapshots and reports are in `artifacts/rescene-real-reproduction/`. The run evaluates the initial model and re-renders all previous visits after each update, checking saved history. The report validates held-out identities, original RGB access, budgets, historical hashes, finite metrics and recomputed PSNR. PSNR, SSIM and LPIPS are available by visit and averaged equally across visits and scenes; initial-included and later-only results are separate. History size includes the initial model once and every update. Arrival and final archival recall coincide only when exact-history checks pass.
+The supplied SfM reconstruction used all images, including held-out views. Background alignment uses training images across visits. Camera registration is therefore performed offline. The scenes have arbitrary scale and no ground-truth geometry.
 
-This portable integration was checked against the validated research implementation without launching another training experiment. See `rescene/reproduction/real-portability-audit.json` and `rescene/reproduction/release-validation.json` for the precise checks. It is not a claim of a fresh end-to-end reproduction.
+## Training
+
+After [installation](../README.md#installation), run:
+
+```bash
+python examples/real.py prepare --dataset-root /path/to/wei_real_multistate_20261030 --gpus 0
+python examples/real.py run --gpus 0
+python eval/multistate.py --subset real
+```
+
+Add `--scenes can` to each command to run one scene. Keep at least 104 GiB free during training. Preparation fixes the selected cameras and configuration. Use a fresh workspace when changing these settings.
+
+The initial reconstruction uses all initial training images and SfM points observed in at least two of those images. Initial fitting uses 30,000 nominal iterations, corresponding to 29,999 optimiser steps in the upstream loop.
+
+Each later visit uses up to 24 training images selected by farthest-camera-centre sampling, with 5,000 Adam steps at a learning rate of 0.001 and seed 0. MASt3R estimates depth with the registered cameras fixed. The photometric and image-preservation losses, birth limits and splitting schedule are the same as in the [synthetic configuration](synthetic.md#training).
+
+## Outputs
+
+- `outputs/rescene-real-photo-v1/rescene/<scene>/initial_model/` contains the initial fit.
+- `outputs/rescene-real-photo-v1/rescene/<scene>/full/` contains the initial state, visit updates and held-out renders.
+- `artifacts/rescene-real-photo-v1/` contains the evaluation reports and run configuration.
+
+The four scenes contain 214 held-out images. Evaluation reports arrival and final recall separately and checks that saved reconstructions remain unchanged. See [evaluation](../eval/README.md) and [rendering a visit](../demo/README.md).

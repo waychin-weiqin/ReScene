@@ -26,7 +26,7 @@ def main():
     if lease:break
    if lease is None:time.sleep(10)
   try:
-   env={**os.environ,'CUDA_VISIBLE_DEVICES':str(gpu),'PYTHONHASHSEED':'0','OMP_NUM_THREADS':'4','PYTHONUNBUFFERED':'1','PYTORCH_CUDA_ALLOC_CONF':'expandable_segments:True','MPLBACKEND':'Agg','HF_HUB_OFFLINE':'1'}
+   env={**os.environ,'CUDA_VISIBLE_DEVICES':str(gpu),'PYTHONHASHSEED':'0','OMP_NUM_THREADS':'4','PYTHONUNBUFFERED':'1','PYTORCH_CUDA_ALLOC_CONF':'expandable_segments:True','MPLBACKEND':'Agg','HF_HUB_OFFLINE':os.environ.get('HF_HUB_OFFLINE','0')}
    def stage(run,tag,args):
     freeze();marker=run/f'{tag}.done.json';fail=run/f'{tag}.failed.json'
     if marker.exists():return

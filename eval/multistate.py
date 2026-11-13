@@ -1,4 +1,4 @@
-"""Validate and aggregate evaluated ReScene histories; no baseline evaluation."""
+"""Evaluate reconstructed visits and summarise ReScene history storage."""
 import argparse
 from rescene.cli import main
 if __name__ == '__main__':

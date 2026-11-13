@@ -14,7 +14,7 @@ if a.action=='prepare':
  else:link.symlink_to(src,target_is_directory=True)
  script='prepare_multistate_hard.py'
 else:
- assert (R/'artifacts/multistate_hard-simple60-v1/protocol.json').exists(),'Run prepare first'
+ assert (R/'artifacts/rescene-synthetic-photo-v1/protocol.json').exists(),'Run prepare first'
  script='report_multistate_hard.py' if a.action=='report' else 'run_multistate_hard.py'
  if a.action=='smoke':env['GSVER_SMOKE_ONLY']='1'
 subprocess.run([sys.executable,str(R/'rescene/pipeline'/script)],cwd=R,env=env,check=True)

@@ -5,21 +5,17 @@
   "max_births": 60000,
   "depth_confidence": 1.5,
   "residual_threshold": 0.05,
-  "retirement_weight": 0.0,
-  "birth_weight": 0.001,
   "static_weight": 1.0,
   "stable_threshold": 0.03,
   "minimum_component": 16,
   "multiview_tolerance": 0.03,
   "minimum_views": 2,
-  "geometry_weight": 0.0001,
   "checkpoints": [
     500,
     1000,
     2500
   ],
   "refine_photo_weight": 1.0,
-  "refine_penalty_weight": 0.01,
   "gate_initial_survival": 0.95,
   "gate_bias": 2.9444389791664403,
   "inference_retirement_opacity": 0.005,
@@ -27,9 +23,6 @@
   "freeze_existing_color": true,
   "appearance_mode": "local",
   "appearance_photo_weight": 1.0,
-  "global_appearance_weight": 0.001,
-  "local_appearance_weight": 0.01,
-  "refinement_confidence_multiplier": 9.0,
   "arm": "adaptive",
   "split_steps": [
     1000,
@@ -41,5 +34,5 @@
     4000,
     4500
   ],
-  "soft_preservation_weight": 0.01
+  "objective": "photometric_plus_preservation"
 }

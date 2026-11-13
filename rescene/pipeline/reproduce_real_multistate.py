@@ -20,7 +20,7 @@ if a.action=='prepare':
  else:link.symlink_to(source,target_is_directory=True)
  script='prepare_real_multistate.py'
 else:
- protocol=R/'artifacts/rescene-real-reproduction/protocol.json'
+ protocol=R/'artifacts/rescene-real-photo-v1/protocol.json'
  assert protocol.exists(),'Run prepare first'
  frozen=json.loads(protocol.read_text());assert frozen['scenes']==a.scenes,'Use the scene selection frozen at prepare'
  if a.action!='report':assert frozen['gpus']==gpus,'Use the GPU selection frozen at prepare'

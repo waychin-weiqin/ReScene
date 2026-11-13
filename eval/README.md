@@ -8,5 +8,3 @@ python eval/multistate.py --subset real
 ```
 
 If preparation used a scene subset, pass the same ordered `--scenes` list. Reports distinguish initial-included averages from later-only averages, weight visits equally within scenes and scenes equally, and count the initial model once in raw history storage. Full history retrieval and current-view RGB access checks must pass before interpreting arrival and final archival recall as equal.
-
-The release contains only ReScene evaluation. No baseline checkpoints, baseline evaluation pipelines or geometry ground truth are bundled.
