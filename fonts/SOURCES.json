@@ -1,0 +1,22 @@
+[
+  {
+    "file": "google-sans-regular.ttf",
+    "source": "https://fonts.gstatic.com/s/googlesans/v76/4Ua_rENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RFD48TE63OOYKtrwEIJllpyw.ttf",
+    "sha256": "2a07d011004391a05cc50471d63b4446bb196aebbe751a4240c202b7cf71968f"
+  },
+  {
+    "file": "noto-sans-italic.ttf",
+    "source": "https://fonts.gstatic.com/s/notosans/v42/o-0kIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevHtVtX57DGjDU1QDce2VDSzQ.ttf",
+    "sha256": "48d0ca1fda5941167b6b4a0257bdc449fdebb027d737c0ff55412f4e8966ff1a"
+  },
+  {
+    "file": "noto-sans-regular.ttf",
+    "source": "https://fonts.gstatic.com/s/notosans/v42/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyD9A-9a6Vc.ttf",
+    "sha256": "07805c0a3e52e7d54d2e6a87308f38f299899e573ecbed68a73b3892795b59a6"
+  },
+  {
+    "file": "noto-sans-bold.ttf",
+    "source": "https://fonts.gstatic.com/s/notosans/v42/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyAaBO9a6Vc.ttf",
+    "sha256": "a1d9b467fa5ad23d120f2272f0510a9df9a628287bf51937f9a89d165305f05a"
+  }
+]
