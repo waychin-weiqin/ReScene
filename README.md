@@ -2,6 +2,7 @@
 
 <p align="center">
   <a href="https://waychin-weiqin.github.io/ReScene/"><img src="https://img.shields.io/badge/Project-Page-1f72b1.svg" alt="Project Page"></a>
+  <a href="https://huggingface.co/datasets/weiqin3595/Multi-State"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow" alt="Hugging Face Dataset"></a>
 </p>
 
 ReScene reconstructs changing scenes from sparse revisits. Per-Gaussian change and stability evidence guides suppression, refinement and the addition of new surfaces. Each visit is stored as an update, allowing earlier reconstructions to be recovered.
