@@ -1,7 +1,7 @@
 # ReScene: Incremental Scene Chronology from Sparse Revisits
 
 <p align="center">
-  <a href="https://waychin-weiqin.github.io/3DGSVer/"><img src="https://img.shields.io/badge/Project-Page-1f72b1.svg" alt="Project Page"></a>
+  <a href="https://waychin-weiqin.github.io/ReScene/"><img src="https://img.shields.io/badge/Project-Page-1f72b1.svg" alt="Project Page"></a>
 </p>
 
 ReScene reconstructs changing scenes from sparse revisits. Per-Gaussian change and stability evidence guides suppression, refinement and the addition of new surfaces. Each visit is stored as an update, allowing earlier reconstructions to be recovered.
