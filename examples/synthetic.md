@@ -31,9 +31,9 @@ export CUDA_HOME=/usr/local/cuda-12.4  # adjust to your toolkit
 bash examples/setup.sh
 ```
 
-`reproduction/upstream-lock.json` pins LTGS's 3DGS fork, MASt3R/DUSt3R/CroCo, COLMAP-format readers, and rasterization dependencies. Setup applies the recorded dataset-reader integration patch and builds a separate visibility-safe rasterizer. Upstream licenses remain in those checkouts. The reference environment uses the PyTorch RoPE fallback; setup does not switch to the optional CUDA RoPE kernel.
+`rescene/reproduction/upstream-lock.json` pins LTGS's 3DGS fork, MASt3R/DUSt3R/CroCo, COLMAP-format readers, and rasterization dependencies. Setup applies the recorded dataset-reader integration patch and builds a separate visibility-safe rasterizer. Upstream licenses remain in those checkouts. The reference environment uses the PyTorch RoPE fallback; setup does not switch to the optional CUDA RoPE kernel.
 
-MASt3R (`naver/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric`) and LPIPS/VGG weights are fetched through their libraries on first use. Obtain these weights before setting `HF_HUB_OFFLINE=1`. Pretrained weights are not committed here. `requirements.txt` records the relevant versions from the reference environment; `reproduction/tested-packages.json` records the observed versions, including PyTorch.
+MASt3R (`naver/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric`) and LPIPS/VGG weights are fetched through their libraries on first use. Obtain these weights before setting `HF_HUB_OFFLINE=1`. Pretrained weights are not committed here. `pyproject.toml` records the relevant versions from the reference environment; `rescene/reproduction/tested-packages.json` records the observed versions, including PyTorch.
 
 ## 2. Obtain the dataset
 
@@ -100,8 +100,8 @@ The original four-scene mean arrival PSNR was **32.71 dB** (including period 0);
 - `rescene/pipeline/multistate_hard_initial_entry.py`: period-0-only training access guard.
 - `rescene/pipeline/run_multistate_hard.py`: smoke gates, full updates and historical rerender checks.
 
-The worker's WAT-specific evaluation paths are replaced at preparation with this dataset's common-GT directory; its training body is unchanged. `reproduction/portability-audit.json` documents copied source hashes and packaging changes.
+The worker's WAT-specific evaluation paths are replaced at preparation with this dataset's common-GT directory; its training body is unchanged. `rescene/reproduction/portability-audit.json` documents copied source hashes and packaging changes.
 
 ## Validation limits
 
-See `reproduction/validation.json` for the checks actually run on this package. A short smoke test does not constitute a new full benchmark or a clean-machine CUDA build. The reported complete benchmark was produced before this packaging step. Dataset, model and cache storage remain excluded from the Git repository.
+See `rescene/reproduction/validation.json` for the checks actually run on this package. A short smoke test does not constitute a new full benchmark or a clean-machine CUDA build. The reported complete benchmark was produced before this packaging step. Dataset, model and cache storage remain excluded from the Git repository.

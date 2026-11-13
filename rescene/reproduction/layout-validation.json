@@ -17,6 +17,5 @@
   "all_four_real_scenes": "Verified in predecessor release a25e0ea; see release-validation.json",
   "source_guards": "passed",
   "new_training_run": false,
-  "layout_reference": "https://github.com/ubc-vision/solv3r",
   "scope": "ReScene-only; code examples eval demo/rendering utility; no website media or baseline pipelines"
 }

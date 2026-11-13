@@ -5,11 +5,11 @@ def prepare_raw():
  spec=importlib.util.spec_from_file_location('rw',R/'external/LTGS/submodules/Hierarchical-Localization/hloc/utils/read_write_model.py');rw=importlib.util.module_from_spec(spec);spec.loader.exec_module(rw)
  for s in SCENES:
   src=R/'data/real-multistate/wei_real_multistate_20261030/dataset'/s;dst=D/'raw-adapter'/s
-  alignpath=R/'reproduction/real-alignment'/s/'alignment.json';al=read(alignpath);review=read(alignpath.parent/'reprojection-review.json');assert len(review)==3 and all(x['pass'] for x in review.values())
+  alignpath=R/'rescene/reproduction/real-alignment'/s/'alignment.json';al=read(alignpath);review=read(alignpath.parent/'reprojection-review.json');assert len(review)==3 and all(x['pass'] for x in review.values())
   cameras={};images={};points={};split=[];tests=[];audit={};idmaps={}
   for t in range(STATE_COUNTS[s]):
    state=src/f't{t:03d}'
-   expected=read(R/'reproduction/real-alignment'/s/'input-hashes.json')[f't{t:03d}']
+   expected=read(R/'rescene/reproduction/real-alignment'/s/'input-hashes.json')[f't{t:03d}']
    for rel,digest in expected.items():assert sha(state/rel)==digest,f'Dataset/calibration revision mismatch: {state/rel}'
    cams,ims,pts=rw.read_model(state/'sparse/0',ext='.bin');test=set((state/'test.txt').read_text().splitlines());train=set((state/'train.txt').read_text().splitlines());assert not test&train and test|train=={im.name for im in ims.values()}
    matrix=np.array(al['transforms_to_initial'][f't{t:03d}']);scale=np.cbrt(np.linalg.det(matrix[:3,:3]));rot=matrix[:3,:3]/scale;offset=matrix[:3,3];assert np.allclose(rot.T@rot,np.eye(3),atol=1e-8)

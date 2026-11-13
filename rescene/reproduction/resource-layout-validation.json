@@ -1,0 +1,8 @@
+{
+  "editable_install": "passed",
+  "runtime_imports": "passed with existing dependencies",
+  "syntax_and_crop_intrinsics": "passed",
+  "configuration_and_dependency_pins": "unchanged",
+  "training_rerun": false,
+  "change": "Resources moved under rescene; dependencies consolidated in pyproject.toml; README layout explanation removed"
+}

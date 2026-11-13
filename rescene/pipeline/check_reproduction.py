@@ -5,7 +5,7 @@ R=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser();p.add_argument('--runtime',action='store_true');a=p.parse_args()
 for folder in ['rescene','examples','eval','demo']:
  for f in (R/folder).rglob('*.py'):ast.parse(f.read_text(),filename=str(f))
-c=json.loads((R/'configs/multistate_hard.json').read_text());assert c['iterations']==5000 and c['max_births']==60000 and c['split_steps']==list(range(1000,4501,500))
+c=json.loads((R/'rescene/configs/multistate_hard.json').read_text());assert c['iterations']==5000 and c['max_births']==60000 and c['split_steps']==list(range(1000,4501,500))
 sys.path.insert(0,str(R/'rescene/pipeline'));from multistate_hard_depth import test;test()
 if a.runtime:
  sys.path.insert(0,str(R/'rescene/model'));from common import GaussianModel,render

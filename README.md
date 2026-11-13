@@ -17,7 +17,6 @@ conda create -n chronogs python=3.10 pip -y
 conda activate chronogs
 export CUDA_HOME=/usr/local/cuda-12.4
 bash examples/setup.sh
-python -m pip install -e . --no-deps
 python -m rescene check --runtime
 ```
 
@@ -61,7 +60,7 @@ python eval/multistate.py --subset synthetic
 python eval/multistate.py --subset real
 ```
 
-These commands validate and summarise the renders produced by the runner. Reports contain PSNR, SSIM, LPIPS, history storage and per-visit results. See [evaluation details](eval/README.md) and [rendering a stored visit](demo/README.md). Reference ReScene metrics and validation records are in `reproduction/`.
+These commands validate and summarise the renders produced by the runner. Reports contain PSNR, SSIM, LPIPS, history storage and per-visit results. See [evaluation details](eval/README.md) and [rendering a stored visit](demo/README.md). Reference ReScene metrics and validation records are in `rescene/reproduction/`.
 
 ## Protocol and validation
 
@@ -69,21 +68,8 @@ The benchmark configuration uses up to 24 current images and 5,000 steps per upd
 
 Synthetic initialisation uses oracle depth from initial training views. Real SfM includes held-out images, and offline alignment uses training images across visits. Real scenes have arbitrary scale and no ground-truth geometry. These are reproduction limitations, not image-only or causal registration claims.
 
-The repository separation changes paths and packaging, not the training equations. Validation scope is recorded in `reproduction/layout-validation.json`; preparation/import checks are distinguished from a fresh end-to-end training reproduction.
+The repository separation changes paths and packaging, not the training equations. Validation scope is recorded in `rescene/reproduction/layout-validation.json`; preparation/import checks are distinguished from a fresh end-to-end training reproduction.
 
-## Repository structure
+## Licence
 
-```text
-rescene/        Core model, renderer adapter and preparation/training pipeline
-examples/       Setup and synthetic/real reproduction workflows
-eval/          Evaluation entry point and metric documentation
-demo/          Stored-visit rendering utility
-assets/         Method illustration for this README
-configs/        Frozen benchmark configuration
-reproduction/   Dependency pins, accepted alignments and reference metrics
-patches/        Required upstream integration patches
-LICENSES/       Third-party notices
-pyproject.toml  Editable Python package and command-line entry point
-```
-
-Only the folder organisation is inspired by SOLV3R; no SOLV3R implementation or licence is copied. A licence for ReScene-authored code has not been selected in this release preparation. Third-party components retain their own terms, including research/non-commercial restrictions where applicable. Do not infer an Apache-2.0 licence from the reference repository.
+Third-party components retain their original terms. See [licensing information](LICENSE) and [dependency notices](LICENSES/README.md).
