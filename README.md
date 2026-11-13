@@ -1,5 +1,13 @@
 # ReScene: Incremental Scene Chronology from Sparse Revisits
 
+<blockquote>
+  <p>
+    Wei Qin Chuah · Zeji Hui · Amirali Khodadadian Gostar · Alireza Bab-Hadiashar<br>
+    <sub>RMIT University</sub><br>
+    <code>{wei.qin.chuah, zeji.hui, amirali.khodadadian, alireza.bab-hadiashar}@rmit.edu.au</code>
+  </p>
+</blockquote>
+
 <p align="center">
   <a href="https://waychin-weiqin.github.io/ReScene/"><img src="https://img.shields.io/badge/Project-Page-1f72b1.svg" alt="Project Page"></a>
   <a href="https://huggingface.co/datasets/weiqin3595/Multi-State"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow" alt="Hugging Face Dataset"></a>
