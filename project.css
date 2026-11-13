@@ -141,3 +141,12 @@ h2{font-size:clamp(30px,3.2vw,42px);line-height:1.2;letter-spacing:-.025em}
 @media(max-width:760px){body{font-size:17px}.nav>div{font-size:14px;gap:4px}.section-intro,.method-intro{font-size:18px}.hero-demo h3,.qualitative-card h3{font-size:24px}.hero-demo>p,.qualitative-card>p{font-size:17px;margin-bottom:20px}.caption,.workflow figcaption{font-size:15px}.method-labels{font-size:12px;gap:4px}.evidence-panels figcaption,.history-panels figcaption{font-size:15px}.result-tabs button,#visit-buttons button{font-size:15px}.results-table{font-size:15px}.dataset-card p{font-size:15px}}
 
 .hero h1{letter-spacing:-.03em}
+
+/* Project resource buttons. */
+.publication-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+.publication-button{display:inline-flex;align-items:center;gap:8px;padding:8px 18px 8px 14px;border-radius:999px;background:#2b2f36;color:#fff;font-family:var(--heading-font);font-size:16px;font-weight:500;line-height:1.5;text-decoration:none;transition:background .2s,transform .2s}
+.publication-button:hover{background:#12151a;transform:translateY(-1px)}
+.publication-button:focus-visible{outline:3px solid #327b6b;outline-offset:4px}
+.publication-button svg{width:18px;height:18px;flex:none}
+.publication-button .hf-emoji{font-size:17px;line-height:1}
+@media(prefers-reduced-motion:reduce){.publication-button{transition:none}.publication-button:hover{transform:none}}
