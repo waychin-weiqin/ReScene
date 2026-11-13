@@ -8,7 +8,6 @@ Use the original release with this layout:
 
 ```text
 wei_real_multistate_20261030/
-  SHA256SUMS
   dataset/
     can/t000/{images,sparse/0,train.txt,test.txt}
     can/t001/...
@@ -31,7 +30,7 @@ python examples/real.py run --gpus 0
 python eval/multistate.py --subset real
 ```
 
-Add `--scenes can` to each command to run one scene. Keep at least 104 GiB free during training. Preparation fixes the selected cameras and configuration. Use a fresh workspace when changing these settings.
+Add `--scenes can` to each command to run one scene. Preparation fixes the selected cameras and configuration. Use a fresh workspace when changing these settings.
 
 The initial reconstruction uses all initial training images and SfM points observed in at least two of those images. Initial fitting uses 30,000 nominal iterations, corresponding to 29,999 optimiser steps in the upstream loop.
 

@@ -9,7 +9,6 @@ Extract the release into this layout:
 ```text
 multistate_hard/
   manifest.json
-  SHA256SUMS
   dataset/
     robot_transfer/t000/{images,sparse/0,...}
     robot_transfer/t001/...
@@ -30,7 +29,7 @@ python examples/synthetic.py run --gpus 0
 python eval/multistate.py --subset synthetic
 ```
 
-Add `--scenes robot_transfer` to each command to run one scene. Preparation records the selected cameras and configuration. Use a fresh workspace when changing these settings. Keep at least 100 GiB free during training.
+Add `--scenes robot_transfer` to each command to run one scene. Preparation records the selected cameras and configuration. Use a fresh workspace when changing these settings.
 
 The initial 3DGS fit uses all 52 initial training images and 30,000 nominal iterations. The upstream loop performs 29,999 optimiser steps. Later visits use 24 images selected by farthest-camera-centre sampling and 5,000 Adam steps at a learning rate of 0.001, with seed 0.
 

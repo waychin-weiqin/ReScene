@@ -48,7 +48,7 @@ python examples/real.py prepare --dataset-root /path/to/wei_real_multistate_2026
 python examples/real.py run --gpus 0
 ```
 
-To train a single scene, add `--scenes robot_transfer` or `--scenes can` to both commands. Run commands from the repository root. Allow at least 100 GiB of free disk space for synthetic runs and 104 GiB for real runs.
+To train a single scene, add `--scenes robot_transfer` or `--scenes can` to both commands. Run commands from the repository root.
 
 The initial model uses all training images of the first visit. Each later update uses up to 24 images and 5,000 optimisation steps. The update objective combines masked photometric losses with image preservation. New Gaussians are initialised from MASt3R depth and split up to a limit of 60,000 per visit.
 
