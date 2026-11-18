@@ -8,6 +8,7 @@
 </blockquote>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2611.20433v1"><img src="https://img.shields.io/badge/arXiv-2611.20433-b31b1b.svg" alt="arXiv Paper"></a>
   <a href="https://waychin-weiqin.github.io/ReScene/"><img src="https://img.shields.io/badge/Project-Page-1f72b1.svg" alt="Project Page"></a>
   <a href="https://huggingface.co/datasets/weiqin3595/Multi-State"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow" alt="Hugging Face Dataset"></a>
 </p>
@@ -74,6 +75,18 @@ python eval/multistate.py --subset real
 ```
 
 Reports include PSNR, SSIM, LPIPS and history storage. If training a scene subset, pass the same `--scenes` list to evaluation. See [evaluation](eval/README.md) for output locations and [rendering](demo/README.md) to recover a stored visit.
+
+## Citation
+
+```bibtex
+@article{chuah2026rescene,
+  title   = {ReScene: Incremental Scene Chronology from Sparse Revisits},
+  author  = {Chuah, Wei Qin and Hui, Zeji and Gostar, Amirali Khodadadian and Bab-Hadiashar, Alireza},
+  journal = {arXiv preprint arXiv:2611.20433},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2611.20433v1}
+}
+```
 
 ## Licence
 
